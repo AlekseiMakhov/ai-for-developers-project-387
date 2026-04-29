@@ -1,0 +1,57 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:e2e": "playwright test",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "run-s lint:*",
+    "lint:oxlint": "oxlint . --fix",
+    "lint:eslint": "eslint . --fix --cache",
+    "generate-pwa-assets": "pwa-assets-generator --config pwa-assets.config.ts"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "5.99.0",
+    "@vee-validate/zod": "4.15.1",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "pinia": "3.0.4",
+    "radix-vue": "1.9.17",
+    "tailwind-merge": "3.5.0",
+    "vee-validate": "4.15.1",
+    "vue": "3.5.32",
+    "vue-i18n": "11.3.2",
+    "vue-router": "5.0.4",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.59.1",
+    "@tsconfig/node24": "24.0.4",
+    "@types/node": "24.12.2",
+    "@vite-pwa/assets-generator": "^1.0.2",
+    "@vitejs/plugin-vue": "6.0.5",
+    "@vue/eslint-config-typescript": "14.7.0",
+    "@vue/tsconfig": "0.9.1",
+    "autoprefixer": "10.4.27",
+    "eslint": "10.2.0",
+    "eslint-plugin-oxlint": "1.57.0",
+    "eslint-plugin-vue": "10.8.0",
+    "jiti": "2.6.1",
+    "npm-run-all2": "8.0.4",
+    "oxlint": "1.57.0",
+    "postcss": "8.5.9",
+    "tailwindcss": "3.4.19",
+    "typescript": "6.0.2",
+    "vite": "8.0.8",
+    "vite-plugin-pwa": "^1.2.0",
+    "vue-tsc": "3.2.6"
+  },
+  "engines": {
+    "node": "^24.0.0 || >=24.0.0"
+  }
+}
